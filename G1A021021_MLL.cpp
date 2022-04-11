@@ -1,79 +1,9 @@
-// C++ program to implement  a multilevel linked list
-
-// MENGENAL MULTILEVEL LINKED LIST
-// Program untuk membuat daftar tertaut sederhana dengan 3 node
-/* Tiga blok telah dialokasikan secara dinamis.
-    Kami memiliki petunjuk ke tiga blok ini sebagai kepala,
-    kedua dan ketiga
-    head         second         third
-        |             |             |
-        |             |             |
-    +---+-----+     +----+----+     +----+----+
-    | # | # |     | # | # |     | # | # |
-    +---+-----+     +----+----+     +----+----+
-     
-# mewakili nilai acak apa pun.
-Data acak karena kami belum menetapkan
-belum apa-apa */
- 
-    // menetapkan data di simpul pertama
-    // Tautkan simpul pertama dengan
-    // simpul kedua
- 
-    /*/* data telah ditetapkan ke bagian data pertama
-    balok (balok yang ditunjuk oleh kepala). Dan selanjutnya
-    penunjuk dari blok pertama menunjuk ke yang kedua.
-    Jadi mereka berdua terhubung.
- 
-    head         second         third
-        |             |             |
-        |             |             |
-    +---+---+     +----+----+     +-----+----+
-    | 1 | o----->| # | # |     | # | # |
-    +---+---+     +----+----+     +-----+----+    
-*/
- 
-    // tetapkan data ke simpul kedua
- 
-    // Tautkan simpul kedua dengan simpul ketiga
- 
-    /* data telah ditetapkan ke bagian data detik
-    blok (blok ditunjuk oleh detik). Dan selanjutnya
-    penunjuk blok kedua menunjuk ke blok ketiga
-    memblokir. Jadi ketiga blok terhubung.
-
-
-     
-    head         second         third
-        |             |             |
-        |             |             |
-    +---+---+     +---+---+     +----+----+
-    | 1 | o----->| 2 | o-----> | # | # |
-    +---+---+     +---+---+     +----+----+     */
- 
-    // menetapkan data ke simpul ketiga
-    /* data telah ditetapkan ke bagian data ketiga
-    blok (blok ditunjuk oleh ketiga). Dan penunjuk berikutnya
-    dari blok ketiga dibuat NULL untuk menunjukkan
-    bahwa daftar tertaut dihentikan di sini.
- 
-    Kami telah menyiapkan daftar tertaut. 
-        head    
-            |
-            |
-        +---+---+     +---+---+     +----+------+
-        | 1 | o----->| 2 | o-----> | 3 | NULL |
-        +---+---+     +---+---+     +----+------+    
-     
-     
-    Perhatikan bahwa hanya kepala yang cukup untuk mewakili
-    seluruh daftar. Kita bisa melintasi yang lengkap
-    daftar dengan mengikuti petunjuk berikutnya. */
+// C++ program to implement  a Multilevel Linked List
 
 #include <bits/stdc++.h>
 using namespace std;
 
-// Representasi  node
+// Representasi node
 class Node {
 public:
 	int data;
@@ -82,7 +12,7 @@ public:
 };
 
 // Fungsi untuk membuat daftar tertaut
-// dengan n(ukuran) node mengembalikan penunjuk kepala
+// dengan n(ukuran) node mengembalikan penunjuk kepala (head pointer)
 Node* createList(int* arr, int n)
 {
 	Node* head = NULL;
